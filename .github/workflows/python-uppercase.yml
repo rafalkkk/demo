@@ -19,3 +19,5 @@ jobs:
           python-version: '3.13' 
       - name: Check python version
         run: python -V          
+      - name: Run tests
+        run: pytest

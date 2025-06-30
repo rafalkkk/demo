@@ -1,0 +1,16 @@
+name: Python uppercase
+
+on:
+  push: 
+    paths:
+      - "py-upper/**"
+      - ".github/workflows/python-uppercase.yml"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check python version
+        run: python -V
+      - name: Download application code
+        uses: actions/checkout@v4

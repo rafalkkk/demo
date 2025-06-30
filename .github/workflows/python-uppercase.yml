@@ -21,7 +21,11 @@ jobs:
           python-version: '3.13' 
       - name: Check python version
         run: python -V          
-      - name: Install requirements
-        run: pip install -r py-upper/requirements.txt
+      # - name: Install requirements
+      #   run: pip install -r py-upper/requirements.txt
+      - name: Install Python dependencies
+        uses: py-actions/py-dependency-install@v4
+        with:
+          path: "py-upper/requirements.txt"
       - name: Run tests
         run: pytest

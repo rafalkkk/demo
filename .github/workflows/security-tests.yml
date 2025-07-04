@@ -9,4 +9,9 @@ jobs:
     steps:
       - name: "show env"
         run: env
-        
+      - name: "status of authentication"
+        run: gh auth status
+      - name: Checkout
+        uses: action/checkout@4
+      - name: "list workflows"
+        run: gh workflow list
